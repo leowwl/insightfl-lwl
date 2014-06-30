@@ -1,0 +1,55 @@
+<!-- extend from base layout -->
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<style>
+body {
+    background: url(/static/images/cars/dashview.jpg);
+    background-size:cover;
+}
+</style>
+
+<br> <br>
+  <div class="well well-sm" style="margin-left: 200px !important; 
+       margin-right: 200px; margin-top: 30px; padding: 5px;" >
+       <center>
+
+<h1 style="text-align:center;">Pick a car, driven by data.</h1>
+<form action="" method="post" name="login">
+  <h3 style="text-align:center;"> &nbsp; &nbsp; Enter commute information and select a car category. Hit Search to start!</h3>
+  
+
+  <p>
+    <!-- br> <b>Workday Commute</b> <br--> <br >
+   {{form.hidden_tag()}}
+   </p>
+   <p>
+       <b>Home Address</b> <br>
+       {{form.origin_in(size=25)}}<br><br><br>
+   </p>
+   <p>
+       <b>Office Address</b> <br>
+       {{form.destin_in(size=25)}}<br>
+   </p>
+
+   <p>
+      <br> <b>Category:</b> 
+    <select name="category_in" >
+      <option value="Small Cars">Compact Cars</option>      
+      <option value="Regular Cars">Midsize Cars</option>      
+      <option value="CUVs and SUVs">CUVs and SUVs</option>
+      <option value="Trucks">Trucks</option>
+    </select>
+    <br/>
+    </p>
+    <br> <p><input type="submit" value="Search" style="height:40px; width:150px">  </p>
+    </div> <!-- well -->
+   <!-- <br> <p> {{form.auto_only}} Automatic Transmission Only</p> -->
+   
+</form>
+{% endblock %}
+
+<!-- {% block footer %}
+  {% include "include/footer.html" %}
+{% endblock %} -->

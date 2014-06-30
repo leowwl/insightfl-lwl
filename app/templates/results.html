@@ -1,0 +1,46 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<style>
+body {
+    background: url(/static/images/cars/blueridge.jpg);
+    background-size:cover;
+}
+</style>
+
+<div class="well well-sm" style="margin-left: 100px !important; 
+       margin-right: 100px; padding: 20px;" >
+
+<h1 class="media-heading" style="text-align:center;"> Models </h1> <br>
+       
+<ul class="media-list"> <center>
+  {% set count = 1 %} 
+  <!-- http://stackoverflow.com/questions/7537439/how-to-increment-a-variable-on-a-for-loop-in-jinja-template -->
+  {% for car in output %}
+  <li class="media">
+    <a class="pull-left"> <!-- href="#" -->
+      <!--Use this line to chk 'static'path:
+       {{url_for('static', filename='images/test.jpg')}}  -->
+      <img class="media-object" src="/static/images/cars/{{car['model_prop']}}.jpg" alt="..." height="160" width="250">
+    </a>
+    <div class="media-body">
+      <h3 class="media-heading"> #{{ count }} {% print car['make'], ' ', car['model'] %} </h3>
+      5-year Cost of Ownership = ${% print car['total_cost'] %}
+      <br>
+      CO2 emission over 5 years = {% print car['total_CO2'] %} lbs
+      <br>
+      Transmission: {% print car['trany'] %} 
+      {% set count = count + 1 %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+</div> <!-- well -->
+
+{% endblock %}
+
+{% block footer %}
+  {% include "include/footer.html" %}
+{% endblock %}

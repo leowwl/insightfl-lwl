@@ -1,0 +1,109 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Revealjs core CSS -->
+    <link href="/static/vendor/components-revealjs/css/reveal.min.css" rel="stylesheet">
+
+    <!-- Page specific CSS files -->
+    
+<link rel="stylesheet"  href="/static/css/CSSTableGenerator.css" type="text/css"/>
+<link rel="stylesheet"  href="/static/css/jquery-ui.css" type="text/css"/>
+<link rel="stylesheet"  href="/static/css/style.css" type="text/css"/>
+<script src="/static/js/jquery-1.10.2.js"></script>
+<script src="/static/js/jquery-ui.js"></script>
+
+<script>
+$(function() {
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+});
+</script>
+
+
+    <!-- Genericons core CSS -->
+    <link href="/static/vendor/Genericons/genericons.css" rel="stylesheet">
+
+    <!-- Your custom styles -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+
+
+<div class="container" style="padding-top:90px;">
+    <div class="row">
+      
+      <div class="col-md-6 col-md-offset-3">
+          <div class="well" style="padding: 5px";><!-- style="margin-left: 200px !important; 
+       margin-right: 200px; margin-top: 30px; "-->
+      
+          <b><h1 style="text-align:center;">AnalytiCar</h1></b>
+          <h3 style="text-align:center;"> A data-driven car recommender<a href="slides">.</a></h3> <br>
+          <div class="form-group">
+
+            <FORM> 
+              <INPUT TYPE="button" class="btn btn-lg
+              center-block" value="Test Drive!" onClick="parent.location='/query'">
+            </FORM> <br>
+          <h3 style="text-align:center;"> Developed by Woei Ling Leow<a href="slides">.</a>  </h3>          
+          </div>
+
+                        
+                    
+           </div>  <!--- <well>  -->
+      </div>
+    </div>
+</div>
+
+    <!-- The footer is placed within its own block to render properly -->
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Page specific script files -->
+    
+
+    <script type="text/javascript">
+      // Dynamically add the bootstrap 'active' class to navbar links.
+      $(document).ready(function($){
+        var urlPath = window.location.pathname.split('/')[1];
+          $('.nav a[href="'+ urlPath +'"]').parent().addClass('active');
+      });
+    </script>
+
+  </body>
+</html>
