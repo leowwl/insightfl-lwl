@@ -2,7 +2,9 @@ Thank you for your interest in the web app, "AnalytiCar"
 
 Kindly note that the AnalytiCar code, which serves as a sample of the code that I write, can be found in the branch "sample_code", which you can easily access through: https://github.com/leowwl/insightfl-lwl/tree/sample_code
 
-In addition, it may require (much) more than a "git clone", install and run to actually run the AnalytiCar on another machine. The code is provided primarily to give a glimpse into how I think about and write code. 
+The main additions I made can be found in the "/app" and "/app/templates" subdirectories. 
+
+In addition, it may require (much) more than a "git clone", a bunch of pip install's etc. to actually run the AnalytiCar on another machine. The code is provided primarily to give a glimpse into how I think about and write code. 
 
 Best,
 WL
